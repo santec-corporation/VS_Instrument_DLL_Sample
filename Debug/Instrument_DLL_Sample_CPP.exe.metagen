@@ -1,0 +1,42 @@
+  Instrument_DLL_Sample_CPP.Main.resources - Embedded, ContainedInManifestFile, 
+  Instrument_DLL_Sample_CPP.MPMSample.resources - Embedded, ContainedInManifestFile, 
+  Instrument_DLL_Sample_CPP.OSUSample.resources - Embedded, ContainedInManifestFile, 
+  Instrument_DLL_Sample_CPP.PCUSample.resources - Embedded, ContainedInManifestFile, 
+  Instrument_DLL_Sample_CPP.TSLSample.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Instrument_DLL_Sample_CPP, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly InstrumentDLL, Version=2.5.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Instrument_DLL_Sample_CPP.TSLSample: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Instrument_DLL_Sample_CPP.PCUSample: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Instrument_DLL_Sample_CPP.MPMSample: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Santec.MPM mpm IsByValue : Public, InitOnly
+    System.Windows.Forms.Label[] lbl_type : Public
+    System.Windows.Forms.Label[] lbl_version : Public
+    System.Windows.Forms.Label[] lbl_sn : Public
+Class Instrument_DLL_Sample_CPP.OSUSample: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Instrument_DLL_Sample_CPP.Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

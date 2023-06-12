@@ -1,0 +1,622 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly InstrumentDLL, Version=2.3.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly NationalInstruments.DAQmx, Version=15.5.40.109, Culture=neutral, PublicKeyToken=dc6ad606294fc298: 
+	hash=None, flags=None
+Assembly FTD2XX_NET, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly NationalInstruments.VisaNS, Version=13.0.40.167, Culture=neutral, PublicKeyToken=dc6ad606294fc298: 
+	hash=None, flags=None
+Assembly Ivi.Visa, Version=5.11.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1: 
+	hash=None, flags=None
+Assembly NationalInstruments.NI4882, Version=13.0.40.159, Culture=neutral, PublicKeyToken=dc6ad606294fc298: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Keysight.Visa, Version=18.1.0.0, Culture=neutral, PublicKeyToken=7a01cdb2a9131f73: 
+	hash=None, flags=None
+Struct Santec.CommunicationTerminator: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.CommunicationTerminator CrLf = 0 : Public, Static, Literal, HasDefault
+    Santec.CommunicationTerminator Cr = 1 : Public, Static, Literal, HasDefault
+    Santec.CommunicationTerminator Lf = 2 : Public, Static, Literal, HasDefault
+Struct Santec.ExceptionCode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.ExceptionCode Unknown = -2147483648 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode InUseError = -40 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode ParameterError = -30 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode DeviceError = -20 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode CommunicationFailure = -14 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode UnauthorizedAccess = -13 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode IOException = -12 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode NotConnected = -11 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode Uninitialized = -10 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode TimeOut = -2 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode Failure = -1 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode Count_mismatch = -5 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode MonitorError = -6 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode Succeed = 0 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode AlreadyConnected = 11 : Public, Static, Literal, HasDefault
+    Santec.ExceptionCode Stopped = 10 : Public, Static, Literal, HasDefault
+Class Santec.MPM: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Santec.Instruments.BaseDevice
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean Enable_216Monitor : Public
+  Properties:
+    MPMInformation Information 'get set' : 
+  Methods:
+    get_Information(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(CommunicationMethod): PrivateScope, Public, Virtual, HideBySig
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig
+    Get_System_Error(String&): PrivateScope, Public, HideBySig
+    Get_Module_Information(Int32, String&): PrivateScope, Public, HideBySig
+    Get_Enable_Module(Int32[]&): PrivateScope, Public, HideBySig
+    Set_READ_Range_Mode(READ_Range_Mode): PrivateScope, Public, HideBySig
+    Get_READ_Range_Mode(READ_Range_Mode&): PrivateScope, Public, HideBySig
+    Set_Range(Int32): PrivateScope, Public, HideBySig
+    Get_Range(Int32&): PrivateScope, Public, HideBySig
+    Set_Averaging_Time(Double): PrivateScope, Public, HideBySig
+    Get_Averaging_Time(Double&): PrivateScope, Public, HideBySig
+    Set_Unit(Power_Unit): PrivateScope, Public, HideBySig
+    Get_Unit(Power_Unit&): PrivateScope, Public, HideBySig
+    Set_Mode(Measurement_Mode): PrivateScope, Public, HideBySig
+    Get_Mode(Measurement_Mode&): PrivateScope, Public, HideBySig
+    Set_Wavelength(Double): PrivateScope, Public, HideBySig
+    Get_Wavelength(Double&): PrivateScope, Public, HideBySig
+    Set_Trigger_Input_Mode(Trigger_Input_Mode): PrivateScope, Public, HideBySig
+    Get_Trigger_Input_Mode(Trigger_Input_Mode&): PrivateScope, Public, HideBySig
+    Set_Sweep_Wavelength(Double, Double, Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Wavelength(Double&, Double&, Double&): PrivateScope, Public, HideBySig
+    Set_Logging_Paremeter_for_STS(Double, Double, Double, Double, Measurement_Mode): PrivateScope, Public, HideBySig
+    Get_READ_Power_for_Module(Int32, Double[]&): PrivateScope, Public, HideBySig
+    Get_READ_Power_Channel(Int32, Int32, Double&): PrivateScope, Public, HideBySig
+    Get_Wavelength_Senctivity_Data(Int32, Int32, Double[]&, Single[]&): PrivateScope, Public, HideBySig
+    Logging_Start(): PrivateScope, Public, HideBySig
+    Logging_Stop(): PrivateScope, Public, HideBySig
+    Get_Logging_Status(Int32&, Int32&): PrivateScope, Public, HideBySig
+    Set_Logging_Data_Point(Int32): PrivateScope, Public, HideBySig
+    Get_Logging_Data_Point(Int32&): PrivateScope, Public, HideBySig
+    Get_Each_Channel_Logdata(Int32, Int32, Single[]&): PrivateScope, Public, HideBySig
+    Get_216_Monitordata(Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Zeroing(): PrivateScope, Public, HideBySig
+    Set_Mode_Each_Module(Int32, Measurement_Mode): PrivateScope, Public, HideBySig
+    Get_Mode_Each_Module(Int32, Measurement_Mode&): PrivateScope, Public, HideBySig
+    Set_Range_Each_Channel(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Get_Range_Each_Channel(Int32, Int32, Int32&): PrivateScope, Public, HideBySig
+    Get_Each_Module_Loggdata(Int32, Single[,]&): PrivateScope, Public, HideBySig
+    Set_Sweep_Speed(Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Speed(Double&): PrivateScope, Public, HideBySig
+    Get_IPAddress(String&): PrivateScope, Public, HideBySig
+    Get_LAN_Portnumber(Int32&): PrivateScope, Public, HideBySig
+Class Santec.OSU: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DeviceName 'get set' : 
+    System.String IPAddress 'get set' : 
+    Int32 Port 'get set' : 
+    Santec.Communication.GPIBConnectType GPIBConnectType 'get set' : 
+    Int32 GPIBAddress 'get set' : 
+    Int32 GPIBBoard 'get set' : 
+    System.String VISAString 'get set' : 
+    UInt32 DeviceID 'get set' : 
+    Santec.CommunicationTerminator Terminator 'get set' : 
+    OSUInformation Information 'get set' : 
+  Methods:
+    set_DeviceName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DeviceName(): PrivateScope, Public, HideBySig, SpecialName
+    set_IPAddress(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_Port(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Port(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBConnectType(GPIBConnectType): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBConnectType(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBAddress(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBBoard(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBBoard(): PrivateScope, Public, HideBySig, SpecialName
+    get_VISAString(): PrivateScope, Public, HideBySig, SpecialName
+    set_VISAString(String): PrivateScope, Public, HideBySig, SpecialName
+    set_DeviceID(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_DeviceID(): PrivateScope, Public, HideBySig, SpecialName
+    set_Terminator(CommunicationTerminator): PrivateScope, Public, HideBySig, SpecialName
+    get_Terminator(): PrivateScope, Public, HideBySig, SpecialName
+    get_Information(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(CommunicationMethod): PrivateScope, Public, HideBySig
+    Connect(): PrivateScope, Public, HideBySig
+    DisConnect(): PrivateScope, Public, HideBySig
+    Set_Switch(Int32): PrivateScope, Public, HideBySig
+    Get_Switch(Int32&): PrivateScope, Public, HideBySig
+    Get_PortNumber(Int32&): PrivateScope, Public, HideBySig
+    Set_Wavelength(Double): PrivateScope, Public, HideBySig
+    Get_Wavelength(Double&): PrivateScope, Public, HideBySig
+    Get_Wavelength_Min(Double&): PrivateScope, Public, HideBySig
+    Get_Wavelength_Max(Double&): PrivateScope, Public, HideBySig
+    Set_Unit(Power_Unit): PrivateScope, Public, HideBySig
+    Get_Unit(Power_Unit&): PrivateScope, Public, HideBySig
+    Get_Power_dBm(Single&): PrivateScope, Public, HideBySig
+    Get_Power_mW(Single&): PrivateScope, Public, HideBySig
+    Get_Active_Port(Int32&): PrivateScope, Public, HideBySig
+    Set_READ_Range_Mode(READ_Range_Mode): PrivateScope, Public, HideBySig
+    Get_READ_Range_Mode(READ_Range_Mode&): PrivateScope, Public, HideBySig
+    Range_Adjust(): PrivateScope, Public, HideBySig
+Class Santec.PCU: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Santec.Instruments.BaseDevice
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DeviceName 'get set' : 
+    PCUInformation Information 'get set' : 
+  Methods:
+    set_DeviceName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DeviceName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Information(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(CommunicationMethod): PrivateScope, Public, Virtual, HideBySig
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig
+    Get_Power_Range(Int32&): PrivateScope, Public, HideBySig
+    Range_Adjust(): PrivateScope, Public, HideBySig
+    Set_SOP_Stauts(SOP_Stauts): PrivateScope, Public, HideBySig
+    Cal_All_SOP_Parametar(Double[], Single[,,]&): PrivateScope, Public, HideBySig
+    Cal_Each_SOP_Parametar(Double[], Single[,]&, Single[,]&, Single[,]&, Single[,]&): PrivateScope, Public, HideBySig
+    Get_Device_ID(String[]&): PrivateScope, Public, HideBySig
+    Get_IPAddress(String&): PrivateScope, Public, HideBySig
+    Get_LAN_Portnumber(Int32&): PrivateScope, Public, HideBySig
+    Get_Optical_InputFlag(Boolean&): PrivateScope, Public, HideBySig
+Class Santec.SPU: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DeviceName 'get set' : 
+    Boolean IsConnected 'get set' : 
+    Double Time_coefficient 'get set' : 
+    Boolean IsSampling 'get ' : 
+    Int32 Logging_Errorcode 'get ' : 
+    Double AveragingTime 'get set' : 
+    Double F_AdditonalTime 'get set' : 
+    Double Meas_Sampling_time 'get set' : 
+    SPUInformation Information 'get set' : 
+  Methods:
+    get_DeviceName(): PrivateScope, Public, HideBySig, SpecialName
+    set_DeviceName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsConnected(): PrivateScope, Public, HideBySig, SpecialName
+    set_Time_coefficient(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Time_coefficient(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSampling(): PrivateScope, Public, HideBySig, SpecialName
+    get_Logging_Errorcode(): PrivateScope, Public, HideBySig, SpecialName
+    set_AveragingTime(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_AveragingTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_F_AdditonalTime(Double): PrivateScope, Public, HideBySig, SpecialName
+    set_Meas_Sampling_time(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Meas_Sampling_time(): PrivateScope, Public, HideBySig, SpecialName
+    get_Information(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(String&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Set_Sampling_Parameter(Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    Set_Sampling_Parameter_for_Measure(Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    Sampling_Start(Boolean(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    Waiting_for_sampling(): PrivateScope, Public, HideBySig
+    Sampling_Stop(): PrivateScope, Public, HideBySig
+    Get_Sampling_Data(Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Get_Sampling_Rawdata(Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Get_Device_ID(String[]&): PrivateScope, Public, HideBySig
+    Buffer_Clear(): PrivateScope, Public, HideBySig
+Class Santec.TSL: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Santec.Instruments.BaseDevice
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TSLInformation Information 'get set' : 
+  Methods:
+    Cal_MinimumTriggerStep_from_SweepSpeed(Double, Double&, Boolean(Optional, HasDefault)): PrivateScope, Public, HideBySig
+    Get_Sweep_Speed_table(Double[]&): PrivateScope, Public, HideBySig
+    Get_Sweep_Speed_Limit(Double&, Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Parameter_for_STS(Double, Double, Double, Double, Double&): PrivateScope, Public, HideBySig
+    Set_Trigger_PassThrough_Disable(): PrivateScope, Public, HideBySig
+    Set_Trigger_PassThrough_Enable(): PrivateScope, Public, HideBySig
+    Set_TriggerOutput_Source(TriggerOut_Source): PrivateScope, Public, HideBySig
+    Get_TriggerOutput_Source(TriggerOut_Source&): PrivateScope, Public, HideBySig
+    Get_IPAddress(String&): PrivateScope, Public, HideBySig
+    Get_LAN_Portnumber(Int32&): PrivateScope, Public, HideBySig
+    Get_Type(String&): PrivateScope, Public, HideBySig
+    Get_APC_Limit_for_Sweep(Double, Double, Single&): PrivateScope, Public, HideBySig
+    Get_Wavelength_Limit_for_Speed(Double, Double&, Double&): PrivateScope, Public, HideBySig
+    Get_Sweep_Speed_for_Wavelength(Double, Double, Double&): PrivateScope, Public, HideBySig
+    get_Information(): PrivateScope, Public, HideBySig, SpecialName
+    Connect(CommunicationMethod): PrivateScope, Public, Virtual, HideBySig
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig
+    TSL_Busy_Check(Int32): PrivateScope, Public, HideBySig
+    Get_Busy_Status(Boolean&): PrivateScope, Public, HideBySig
+    Set_Coh_Control_Status(Coh_Status): PrivateScope, Public, HideBySig
+    Get_Coh_Control_Status(Coh_Status&): PrivateScope, Public, HideBySig
+    Set_LD_Status(LD_Status): PrivateScope, Public, HideBySig
+    Get_LD_Status(LD_Status&): PrivateScope, Public, HideBySig
+    Set_Shutter_Status(Shutter_Status): PrivateScope, Public, HideBySig
+    Get_Shutter_Status(Shutter_Status&): PrivateScope, Public, HideBySig
+    Get_Spec_Wavelength(Double&, Double&): PrivateScope, Public, HideBySig
+    Get_Spec_Frequency(Double&, Double&): PrivateScope, Public, HideBySig
+    Set_Wavelength_Unit(Wavelength_Unit): PrivateScope, Public, HideBySig
+    Get_Wavelength_Unit(Wavelength_Unit&): PrivateScope, Public, HideBySig
+    Set_Wavelength(Double): PrivateScope, Public, HideBySig
+    Get_Wavelength(Double&): PrivateScope, Public, HideBySig
+    Set_Frequency(Double): PrivateScope, Public, HideBySig
+    Get_Frequency(Double&): PrivateScope, Public, HideBySig
+    Set_Finetuning(Double): PrivateScope, Public, HideBySig
+    Get_Finetuning(Double&): PrivateScope, Public, HideBySig
+    Set_Power_Unit(Power_Unit): PrivateScope, Public, HideBySig
+    Get_Power_Unit(Power_Unit&): PrivateScope, Public, HideBySig
+    Get_APC_Limit_Power_dBm(Double&, Double&): PrivateScope, Public, HideBySig
+    Get_APC_Limit_Power_mW(Double&, Double&): PrivateScope, Public, HideBySig
+    Set_APC_Power_dBm(Double): PrivateScope, Public, HideBySig
+    Set_APC_Power_mW(Double): PrivateScope, Public, HideBySig
+    Get_Setting_Power_dBm(Double&): PrivateScope, Public, HideBySig
+    Get_Setting_Power_mW(Double&): PrivateScope, Public, HideBySig
+    Get_Monitor_Power_dBm(Double&): PrivateScope, Public, HideBySig
+    Get_Monitor_Power_mW(Double&): PrivateScope, Public, HideBySig
+    Set_Power_Mode(Power_Mode): PrivateScope, Public, HideBySig
+    Get_Power_Mode(Power_Mode&): PrivateScope, Public, HideBySig
+    Set_ATT_Value(Double): PrivateScope, Public, HideBySig
+    Get_ATT_Value(Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Wavelength(Double, Double): PrivateScope, Public, HideBySig
+    Set_Sweep_Start_Wavelength(Double): PrivateScope, Public, HideBySig
+    Set_Sweep_Stop_Wavelength(Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Wavelength(Double&, Double&): PrivateScope, Public, HideBySig
+    Get_Sweep_Start_Wavelength(Double&): PrivateScope, Public, HideBySig
+    Get_Sweep_Stop_Wavelength(Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Frequency(Double, Double): PrivateScope, Public, HideBySig
+    Set_Sweep_Start_Frequency(Double): PrivateScope, Public, HideBySig
+    Set_Sweep_Stop_Frequency(Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Frequency(Double&, Double&): PrivateScope, Public, HideBySig
+    Get_Sweep_Start_Frequency(Double&): PrivateScope, Public, HideBySig
+    Get_Sweep_Stop_Frequency(Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Delay(Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Delay(Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Cycle(Int32): PrivateScope, Public, HideBySig
+    Get_Sweep_Cycle(Int32&): PrivateScope, Public, HideBySig
+    Get_Sweep_Count(Int32&): PrivateScope, Public, HideBySig
+    Set_Sweep_Speed(Double): PrivateScope, Public, HideBySig
+    Get_Sweep_Speed(Double&): PrivateScope, Public, HideBySig
+    Set_Wavelength_Step(Double): PrivateScope, Public, HideBySig
+    Get_Wavelength_Step(Double&): PrivateScope, Public, HideBySig
+    Set_Frequency_Step(Double): PrivateScope, Public, HideBySig
+    Get_Frequency_Step(Double&): PrivateScope, Public, HideBySig
+    Set_Sweep_Mode(Sweep_Mode): PrivateScope, Public, HideBySig
+    Get_Sweep_Mode(Sweep_Mode&): PrivateScope, Public, HideBySig
+    Set_Trigger_Output_Mode(Trigger_Output_Mode): PrivateScope, Public, HideBySig
+    Set_Input_Trigger_Mode(Trigger_Input_Mode): PrivateScope, Public, HideBySig
+    Get_Input_Trigger_Mode(Trigger_Input_Mode&): PrivateScope, Public, HideBySig
+    Set_Sweep_Start_Mode(Sweep_Start_Mode): PrivateScope, Public, HideBySig
+    Get_Sweep_Start_Mode(Sweep_Start_Mode&): PrivateScope, Public, HideBySig
+    Get_Trigger_Output_Mode(Trigger_Output_Mode&): PrivateScope, Public, HideBySig
+    Set_Sweep_Mode_Parameters(Sweep_Mode, Trigger_Output_Mode, Trigger_Input_Mode, Sweep_Start_Mode): PrivateScope, Public, HideBySig
+    Set_Trigger_Step(Double): PrivateScope, Public, HideBySig
+    Get_Trigger_Step(Double&): PrivateScope, Public, HideBySig
+    Sweep_Start(): PrivateScope, Public, HideBySig
+    Sweep_Stop(): PrivateScope, Public, HideBySig
+    Sweep_Pause(): PrivateScope, Public, HideBySig
+    Sweep_Restart(): PrivateScope, Public, HideBySig
+    Get_Sweep_Status(Sweep_Status&): PrivateScope, Public, HideBySig
+    Waiting_For_Sweep_Status(Int32, Sweep_Status): PrivateScope, Public, HideBySig
+    Set_Software_Trigger(): PrivateScope, Public, HideBySig
+    Get_Logging_Data(Int32&, Double[]&): PrivateScope, Public, HideBySig
+    Get_System_Error(String&): PrivateScope, Public, HideBySig
+Class Santec.Instruments.BaseDevice: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :Santec.Communication.MainCommunication
+  Interfaces:
+    Santec.Instruments.IDevice
+  Properties:
+    Boolean IsConnected 'get set' : 
+  Methods:
+    get_IsConnected(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Connect(CommunicationMethod): PrivateScope, Public, Virtual, HideBySig
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig
+Struct Santec.Communication.CommunicationMethod: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.Communication.CommunicationMethod GPIB = 0 : Public, Static, Literal, HasDefault
+    Santec.Communication.CommunicationMethod C232C = 1 : Public, Static, Literal, HasDefault
+    Santec.Communication.CommunicationMethod TCPIP = 2 : Public, Static, Literal, HasDefault
+    Santec.Communication.CommunicationMethod USB = 3 : Public, Static, Literal, HasDefault
+Struct Santec.Communication.GPIBConnectType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.Communication.GPIBConnectType NIVisa = 0 : Public, Static, Literal, HasDefault
+    Santec.Communication.GPIBConnectType NI4882 = 1 : Public, Static, Literal, HasDefault
+    Santec.Communication.GPIBConnectType KeysightIO = 2 : Public, Static, Literal, HasDefault
+Class Santec.Communication.MainCommunication: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ComPort 'get set' : 
+    Int32 BaudRate 'get set' : 
+    System.String IPAddress 'get set' : 
+    Int32 Port 'get set' : 
+    Int32 ReadBufferSize 'get set' : 
+    Int32 Waittime 'get set' : 
+    Santec.Communication.GPIBConnectType GPIBConnectType 'get set' : 
+    Int32 GPIBAddress 'get set' : 
+    Int32 GPIBBoard 'get set' : 
+    System.String VISAString 'get set' : 
+    UInt32 DeviceID 'get set' : 
+    Int32 FT_Waittime 'get set' : 
+    Int32 TimeOut 'get set' : 
+    Santec.CommunicationTerminator Terminator 'get set' : 
+  Methods:
+    get_ComPort(): PrivateScope, Public, HideBySig, SpecialName
+    set_ComPort(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BaudRate(): PrivateScope, Public, HideBySig, SpecialName
+    set_BaudRate(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_IPAddress(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Port(): PrivateScope, Public, HideBySig, SpecialName
+    set_Port(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ReadBufferSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReadBufferSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Waittime(): PrivateScope, Public, HideBySig, SpecialName
+    set_Waittime(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBConnectType(GPIBConnectType): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBConnectType(): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBAddress(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GPIBBoard(): PrivateScope, Public, HideBySig, SpecialName
+    set_GPIBBoard(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_VISAString(): PrivateScope, Public, HideBySig, SpecialName
+    set_VISAString(String): PrivateScope, Public, HideBySig, SpecialName
+    set_DeviceID(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_DeviceID(): PrivateScope, Public, HideBySig, SpecialName
+    get_FT_Waittime(): PrivateScope, Public, HideBySig, SpecialName
+    set_FT_Waittime(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_TimeOut(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeOut(): PrivateScope, Public, HideBySig, SpecialName
+    get_Terminator(): PrivateScope, Public, HideBySig, SpecialName
+    set_Terminator(CommunicationTerminator): PrivateScope, Public, HideBySig, SpecialName
+    Get_Serial_Port(): PrivateScope, Public, Static, HideBySig
+    Get_GPIB_Resources(): PrivateScope, Public, Static, HideBySig
+    Get_USB_Resouce(): PrivateScope, Public, Static, HideBySig
+    Connect(CommunicationMethod): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Read(String&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Echo(String, String&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BinaryRead(Int32, Byte[]&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DisConnect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct Santec.MPM+READ_Range_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    READ_Range_Mode Manual = 0 : Public, Static, Literal, HasDefault
+    READ_Range_Mode Auto = 1 : Public, Static, Literal, HasDefault
+Struct Santec.MPM+Power_Unit: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Power_Unit dBm = 0 : Public, Static, Literal, HasDefault
+    Power_Unit mW = 1 : Public, Static, Literal, HasDefault
+    Power_Unit dBmA = 0 : Public, Static, Literal, HasDefault
+    Power_Unit mA = 1 : Public, Static, Literal, HasDefault
+Struct Santec.MPM+Measurement_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Measurement_Mode ManualRangeConstant = 0 : Public, Static, Literal, HasDefault
+    Measurement_Mode ManualRangeSweep = 1 : Public, Static, Literal, HasDefault
+    Measurement_Mode AutoRangeConstant = 2 : Public, Static, Literal, HasDefault
+    Measurement_Mode AutoRangeSweep = 3 : Public, Static, Literal, HasDefault
+    Measurement_Mode Freerun = 4 : Public, Static, Literal, HasDefault
+Struct Santec.MPM+Trigger_Input_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Trigger_Input_Mode Internal = 0 : Public, Static, Literal, HasDefault
+    Trigger_Input_Mode Extarnal = 1 : Public, Static, Literal, HasDefault
+Class Santec.MPM+MPMInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :Santec.Instruments.BaseDevice+BaseInformation
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 NumberofModule 'get set' : 
+    Boolean[] ModuleEnable 'get set' : 
+    System.String[] ModuleType 'get set' : 
+    System.String[] ModuelSerial 'get set' : 
+    System.String[] ModuleFW 'get set' : 
+    Power_Unit Unit 'get set' : 
+  Methods:
+    get_NumberofModule(): PrivateScope, Public, HideBySig, SpecialName
+    get_ModuleEnable(): PrivateScope, Public, HideBySig, SpecialName
+    get_ModuleType(): PrivateScope, Public, HideBySig, SpecialName
+    get_ModuelSerial(): PrivateScope, Public, HideBySig, SpecialName
+    get_ModuleFW(): PrivateScope, Public, HideBySig, SpecialName
+    get_Unit(): PrivateScope, Public, HideBySig, SpecialName
+Struct Santec.OSU+Power_Unit: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Power_Unit dBm = 0 : Public, Static, Literal, HasDefault
+    Power_Unit mW = 1 : Public, Static, Literal, HasDefault
+Struct Santec.OSU+READ_Range_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    READ_Range_Mode Auto = 0 : Public, Static, Literal, HasDefault
+    READ_Range_Mode PM1 = 1 : Public, Static, Literal, HasDefault
+    READ_Range_Mode PM2 = 2 : Public, Static, Literal, HasDefault
+Class Santec.OSU+OSUInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :Santec.Instruments.BaseDevice+BaseInformation
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 PortNnumber 'get set' : 
+  Methods:
+    get_PortNnumber(): PrivateScope, Public, HideBySig, SpecialName
+Struct Santec.PCU+SOP_Stauts: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SOP_Stauts LVP = 0 : Public, Static, Literal, HasDefault
+    SOP_Stauts LHP = 1 : Public, Static, Literal, HasDefault
+    SOP_Stauts LP45 = 2 : Public, Static, Literal, HasDefault
+    SOP_Stauts RCP = 3 : Public, Static, Literal, HasDefault
+    SOP_Stauts LN45 = 4 : Public, Static, Literal, HasDefault
+    SOP_Stauts LCP = 5 : Public, Static, Literal, HasDefault
+Struct Santec.PCU+Power_Unit: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Power_Unit dBm = 0 : Public, Static, Literal, HasDefault
+    Power_Unit mW = 1 : Public, Static, Literal, HasDefault
+Class Santec.PCU+PCUInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :Santec.Instruments.BaseDevice+BaseInformation
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Band 'get set' : 
+    Correction Correction_Parameter 'get set' : 
+  Methods:
+    get_Band(): PrivateScope, Public, HideBySig, SpecialName
+    get_Correction_Parameter(): PrivateScope, Public, HideBySig, SpecialName
+Class Santec.PCU+Correction: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double[] Factor_A 'get set' : 
+    Double[] Factor_B 'get set' : 
+    Double[] Factor_C 'get set' : 
+    Double[] Factor_D 'get set' : 
+    Double Factor_G0 'get set' : 
+    Double[] Factor_H 'get set' : 
+    Double Factor_Temp 'get set' : 
+    Double Factor_Wavelength 'get set' : 
+  Methods:
+    get_Factor_A(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_B(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_C(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_D(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_G0(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_H(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_Temp(): PrivateScope, Public, HideBySig, SpecialName
+    get_Factor_Wavelength(): PrivateScope, Public, HideBySig, SpecialName
+Class Santec.SPU+SPUInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :Santec.Instruments.BaseDevice+BaseInformation
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct Santec.TSL+Coh_Status: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Coh_Status Coh_OFF = 0 : Public, Static, Literal, HasDefault
+    Coh_Status Coh_ON = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+LD_Status: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    LD_Status LD_OFF = 0 : Public, Static, Literal, HasDefault
+    LD_Status LD_ON = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Shutter_Status: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Shutter_Status Shutter_Open = 0 : Public, Static, Literal, HasDefault
+    Shutter_Status Shutter_Close = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Wavelength_Unit: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Wavelength_Unit nm = 0 : Public, Static, Literal, HasDefault
+    Wavelength_Unit THz = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Power_Unit: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Power_Unit dBm = 0 : Public, Static, Literal, HasDefault
+    Power_Unit mW = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Power_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Power_Mode ACC = 0 : Public, Static, Literal, HasDefault
+    Power_Mode APC = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Sweep_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Sweep_Mode Step_Oneway = 0 : Public, Static, Literal, HasDefault
+    Sweep_Mode Continuous_Oneway = 1 : Public, Static, Literal, HasDefault
+    Sweep_Mode Step_Twoway = 2 : Public, Static, Literal, HasDefault
+    Sweep_Mode Continuous_Twoway = 3 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Trigger_Output_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Trigger_Output_Mode None = 0 : Public, Static, Literal, HasDefault
+    Trigger_Output_Mode Stop = 1 : Public, Static, Literal, HasDefault
+    Trigger_Output_Mode Start = 2 : Public, Static, Literal, HasDefault
+    Trigger_Output_Mode Step = 3 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Trigger_Input_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Trigger_Input_Mode Disable = 0 : Public, Static, Literal, HasDefault
+    Trigger_Input_Mode Enable = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Sweep_Start_Mode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Sweep_Start_Mode Normal = 0 : Public, Static, Literal, HasDefault
+    Sweep_Start_Mode WaitingforTrigger = 1 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+Sweep_Status: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Sweep_Status Standby = 0 : Public, Static, Literal, HasDefault
+    Sweep_Status Running = 1 : Public, Static, Literal, HasDefault
+    Sweep_Status Pausing = 2 : Public, Static, Literal, HasDefault
+    Sweep_Status WaitingforTrigger = 3 : Public, Static, Literal, HasDefault
+    Sweep_Status Returning = 4 : Public, Static, Literal, HasDefault
+Struct Santec.TSL+TriggerOut_Source: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TriggerOut_Source Wavelength = 0 : Public, Static, Literal, HasDefault
+    TriggerOut_Source Time = 1 : Public, Static, Literal, HasDefault
+Class Santec.TSL+TSLInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :Santec.Instruments.BaseDevice+BaseInformation
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double MinimunWavelength 'get set' : 
+    Double MaximumWavelength 'get set' : 
+    Double MinimunFrequency 'get set' : 
+    Double MaximumFrequency 'get set' : 
+    Double MinimumAPCPower_dBm 'get set' : 
+    Double MaximumAPCPower_dBm 'get set' : 
+    Double MinimumAPCPower_mW 'get set' : 
+    Double MaximumAPCPower_mW 'get set' : 
+    Double MinimumATTValue 'get set' : 
+    Double MaximumATTValue 'get set' : 
+    Double MinimumSpeed 'get set' : 
+    Double MaximumSpeed 'get set' : 
+    System.String Type 'get set' : 
+  Methods:
+    get_MinimunWavelength(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumWavelength(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimunFrequency(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumFrequency(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimumAPCPower_dBm(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumAPCPower_dBm(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimumAPCPower_mW(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumAPCPower_mW(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimumATTValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumATTValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinimumSpeed(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaximumSpeed(): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+Class Santec.Instruments.BaseDevice+BaseInformation: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ProductName 'get set' : 
+    System.String SerialNumber 'get set' : 
+    System.String FWversion 'get set' : 
+  Methods:
+    get_ProductName(): PrivateScope, Public, HideBySig, SpecialName
+    get_SerialNumber(): PrivateScope, Public, HideBySig, SpecialName
+    get_FWversion(): PrivateScope, Public, HideBySig, SpecialName

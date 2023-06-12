@@ -1,0 +1,55 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  stdafx.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: 参见“MBCS_Support_Deprecated_In_MFC”的声明
+  TSL_Sweep_function.cpp
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_sweep_function.cpp(180): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_sweep_function.cpp(220): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_sweep_function.cpp(320): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_sweep_function.cpp(325): warning C4018: “<”: 有符号/无符号不匹配
+  TSL_Normal_function.cpp
+  TSL_Communication_Setting.cpp
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(159): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(205): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(206): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(207): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(208): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(209): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\tsl_communication_setting.cpp(210): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  TSLSample_Class.cpp
+  PCUSample_Class.cpp
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(139): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(140): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(141): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(142): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(143): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(144): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(145): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(499): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(540): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\pcusample_class.cpp(580): warning C4018: “<”: 有符号/无符号不匹配
+  OSUSample_Class.cpp
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(96): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(202): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(203): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(204): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(205): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\osusample_class.cpp(206): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  MPM_Normal_function.cpp
+  MPM_Logging2.cpp
+  MPM_Logging1.cpp
+  MPM_Communication_Setting.cpp
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(160): warning C4018: “<”: 有符号/无符号不匹配
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(212): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(213): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(214): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\instrument_dll_sample_mfc\mpm_communication_setting.cpp(215): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  MPMSample_Class.cpp
+  Main.cpp
+  Instrument_DLL_Sample_MFC.cpp
+  正在生成代码...
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\MFCDebug\Instrument_DLL_Sample_MFC.exe
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\MFCDebug\Instrument_DLL_Sample_MFC.pdb (Partial PDB)

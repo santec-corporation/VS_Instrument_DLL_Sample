@@ -1,0 +1,19 @@
+﻿  Stdafx.cpp
+  AssemblyInfo.cpp
+  librayForMFCInstrument.cpp
+librayForMFCInstrument.cpp(171): warning C4101: “ans”: 未引用的局部变量
+librayForMFCInstrument.cpp(1339): warning C4244: “=”: 从“__int64”转换到“double”，可能丢失数据
+librayForMFCInstrument.cpp(1408): warning C4101: “loop1”: 未引用的局部变量
+librayForMFCInstrument.cpp(1516): warning C4101: “gpibmethod”: 未引用的局部变量
+librayForMFCInstrument.cpp(1819): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+librayForMFCInstrument.cpp(2027): warning C4101: “trigger_input_mode”: 未引用的局部变量
+librayForMFCInstrument.cpp(2636): warning C4101: “ans”: 未引用的局部变量
+librayForMFCInstrument.cpp(2604): warning C4101: “gpibmethod”: 未引用的局部变量
+librayForMFCInstrument.cpp(2874): warning C4800: “char *”: 将值强制为布尔值“true”或“false”(性能警告)
+  正在生成代码...
+d:\test\newdll\instrument_dll_sample_20230322_ver1.3.0\librayformfcinstrument\librayformfcinstrument\librayformfcinstrument.cpp(515): warning C4700: 使用了未初始化的局部变量“busy_time”
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  AssemblyInfo.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
+    正在创建库 D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\librayForMFCInstrument\x64\Debug\librayForMFCInstrument.lib 和对象 D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\librayForMFCInstrument\x64\Debug\librayForMFCInstrument.exp
+  librayForMFCInstrument.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\librayForMFCInstrument\x64\Debug\librayForMFCInstrument.dll
+  librayForMFCInstrument.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\librayForMFCInstrument\x64\Debug\librayForMFCInstrument.pdb (Partial PDB)

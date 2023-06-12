@@ -1,0 +1,31 @@
+﻿  无法解决“NationalInstruments.Common, Version=15.1.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298”与“NationalInstruments.Common, Version=13.0.40.188, Culture=neutral, PublicKeyToken=dc6ad606294fc298”之间的冲突。正在随意选择“NationalInstruments.Common, Version=15.1.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298”。
+  无法解决“Ivi.Visa, Version=5.11.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1”与“Ivi.Visa, Version=5.8.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1”之间的冲突。正在随意选择“Ivi.Visa, Version=5.11.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1”。
+  请考虑使用 app.config 将程序集“NationalInstruments.Common, Culture=neutral, PublicKeyToken=dc6ad606294fc298”从版本“13.0.40.188”[]重新映射到版本“15.1.40.49152”[D:\test\NewDll\Instrument_DLL_Sample_20220831_Ver1.2.2\DLL\NationalInstruments.Common.dll]，以解决冲突并消除警告。
+  请考虑使用 app.config 将程序集“Ivi.Visa, Culture=neutral, PublicKeyToken=a128c98f1d7717c1”从版本“5.8.0.0”[C:\Program Files (x86)\IVI Foundation\VISA\Microsoft.NET\Framework32\v2.0.50727\VISA.NET Shared Components 5.8.0\Ivi.Visa.dll]重新映射到版本“5.11.0.0”[D:\test\NewDll\Instrument_DLL_Sample_20220831_Ver1.2.2\DLL\Ivi.Visa.dll]，以解决冲突并消除警告。
+C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3276: 发现同一依赖程序集的不同版本间存在冲突。请将项目文件中的“AutoGenerateBindingRedirects”属性设置为 true。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294190。
+  Main.cpp
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(2654): warning C4101: “ans”: 未引用的局部变量
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(3007): warning C4244: “=”: 从“__int64”转换到“double”，可能丢失数据
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(3820): warning C4244: “=”: 从“__int64”转换到“double”，可能丢失数据
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\PCUSample.h(960): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\PCUSample.h(1346): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(2668): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(3007): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(3213): warning C4101: “trigger_input_mode”: 未引用的局部变量
+  MPMSample.cpp
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(2668): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(3007): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\MPMSample.h(3213): warning C4101: “trigger_input_mode”: 未引用的局部变量
+  OSUSample.cpp
+  PCUSample.cpp
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\PCUSample.h(960): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\PCUSample.h(1346): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+  TSLSample.cpp
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(2654): warning C4101: “ans”: 未引用的局部变量
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(3007): warning C4244: “=”: 从“__int64”转换到“double”，可能丢失数据
+d:\test\newdll\instrument_dll_sample_20220831_ver1.2.2\instrument_dll_sample_cpp\TSLSample.h(3820): warning C4244: “=”: 从“__int64”转换到“double”，可能丢失数据
+  正在生成代码...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  
+Instrument_DLL_Sample_CPP.rc(93): error RC2135: file not found: D:\test\NewDll\Instrument_DLL_Sample_20220831_Ver1.2.2\SANTEC.ICO
+  

@@ -1,0 +1,73 @@
+﻿  stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: 参见“MBCS_Support_Deprecated_In_MFC”的声明
+  Instrument_DLL_Sample_MFC.cpp
+  Main.cpp
+  MPMSample_Class.cpp
+  MPM_Communication_Setting.cpp
+MPM_Communication_Setting.cpp(53): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+MPM_Communication_Setting.cpp(57): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+MPM_Communication_Setting.cpp(58): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+MPM_Communication_Setting.cpp(81): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MPM_Communication_Setting.cpp(157): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MPM_Communication_Setting.cpp(212): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(213): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(214): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(215): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(219): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MPM_Communication_Setting.cpp(236): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+MPM_Communication_Setting.cpp(256): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+MPM_Communication_Setting.cpp(277): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  MPM_Logging1.cpp
+  MPM_Logging2.cpp
+  MPM_Normal_function.cpp
+  OSUSample_Class.cpp
+OSUSample_Class.cpp(50): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+OSUSample_Class.cpp(54): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+OSUSample_Class.cpp(55): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+OSUSample_Class.cpp(81): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+OSUSample_Class.cpp(93): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+OSUSample_Class.cpp(202): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(203): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(204): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(205): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(206): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  PCUSample_Class.cpp
+PCUSample_Class.cpp(64): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+PCUSample_Class.cpp(68): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+PCUSample_Class.cpp(69): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+PCUSample_Class.cpp(139): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(140): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(141): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(142): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(143): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(144): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(145): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(150): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+PCUSample_Class.cpp(437): warning C4312: “类型转换”: 从“int”转换到更大的“LPCSTR”
+PCUSample_Class.cpp(496): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+PCUSample_Class.cpp(537): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+PCUSample_Class.cpp(577): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  TSLSample_Class.cpp
+  TSL_Communication_Setting.cpp
+TSL_Communication_Setting.cpp(205): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(206): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(207): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(208): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(209): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(210): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(316): warning C4312: “类型转换”: 从“int”转换到更大的“LPCSTR”
+  TSL_Normal_function.cpp
+  TSL_Sweep_function.cpp
+TSL_Sweep_function.cpp(57): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+TSL_Sweep_function.cpp(61): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+TSL_Sweep_function.cpp(62): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+TSL_Sweep_function.cpp(180): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(220): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(320): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(322): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码
+  All 673 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\x64\Release\Instrument_DLL_Sample_MFC.exe
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230322_Ver1.3.0\x64\Release\Instrument_DLL_Sample_MFC.pdb (Full PDB)
