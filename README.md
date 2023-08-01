@@ -41,7 +41,7 @@
  
 6. Operational steps
    
-   Refere to the Manual
+   Refer to the Manual
    
    Chinese  [Instrument_DLL_Sample_Manual-C-v1.3.0.pdf](https://github.com/santec-corporation/VS_Instrument_DLL_Sample/files/11933711/Instrument_DLL_Sample_Manual-C-v1.3.0.pdf)
 
