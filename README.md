@@ -11,16 +11,16 @@
        ·Visual Basic:             Microsoft Visual Basic 2015  
        ·C#:                       Microsoft Visual C# 2015   
        ·C++:                      Microsoft Visual C++ 2015    
-       ·GPIB drives：             National Instruments NI488.2 Version 15.5    
-                                  National Instruments NI VISA Version 15.5    
+       ·GPIB drives：             National Instruments NI488.2 Version 17.6    
+                                  National Instruments NI VISA Version 17.6    
                                   Keysight Visa Version 18.1    
-       ·DAQ drives：              National Instruments DAQ Version 15.5    
+       ·DAQ drives：              National Instruments DAQ Version 17.6    
 
 3. System environment  
      To use this software, you must install the driver in the table below.  
      Framework                      .NET Framework 4.5.2  
-     GPIB drives                    National Instruments NI488.2 version 15.5  
-     DAQ drives                     National Instruments DAQ Version 15.5  
+     GPIB drives                    National Instruments NI488.2 version 17.6 
+     DAQ drives                     National Instruments DAQ Version 17.6  
      USB driver                     CDM Version 2.12.28  
      Among them, GPIB and DAQ drivers only use GPIB, Visa connection needs to be installed, and USB driver is   
      installed when USB connection is used.  
