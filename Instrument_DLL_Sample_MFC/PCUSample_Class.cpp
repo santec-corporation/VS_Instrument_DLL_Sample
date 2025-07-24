@@ -54,6 +54,7 @@ BEGIN_MESSAGE_MAP(PCUSample_Class, CDialogEx)
 	ON_BN_CLICKED(PCUbtnControl_ID, &PCUSample_Class::OnBnClickedPCUId)
 	ON_BN_CLICKED(PCUbtnSet_SOP, &PCUSample_Class::OnBnClickedPCUSop)
 	ON_BN_CLICKED(PCUbtnGet_Range, &PCUSample_Class::OnBnClickedPCURange)
+	ON_BN_CLICKED(PCUbtnSplit, &PCUSample_Class::OnBnClickedPcubtnsplit)
 END_MESSAGE_MAP()
 
 
@@ -76,39 +77,6 @@ inline vector<string> split(const string& s, const string& seperator) {
 }
 
 
-void PCUSample_Class::OnBnClickedPcubtnsplit()
-{
-	HINSTANCE hInst = LoadLibrary(_T("librayForMFCInstrument.dll"));
-	if (hInst)
-	{
-
-		typedef void(*pFunc)(char*, char* &, char* &);
-		pFunc Func_GetSplit = (pFunc)GetProcAddress(hInst, "Split");
-		if (Func_GetSplit)
-		{
-			CString resouce = "";
-			char* boad = "";
-			char* address = "";
-
-			gpib_resouce.GetLBText(gpib_resouce.GetCurSel(), resouce);
-
-			Func_GetSplit((LPSTR)(LPCSTR)resouce, boad, address);
-			GetDlgItem(PCUtxtboad)->SetWindowTextA(boad);
-			GetDlgItem(PCUtxtaddressnum)->SetWindowTextA(address);
-		}
-		else
-		{
-			::MessageBoxA(NULL, "Get function fail.", "Fail", MB_OK);
-		}
-		//free library
-		FreeLibrary(hInst);
-		hInst = nullptr;
-	}
-	else
-	{
-		::MessageBoxA(NULL, "Load dll fail.", "Fail", MB_OK);
-	}
-}
 
 
 void PCUSample_Class::OnBnClickedPcubtnconnect()
@@ -579,11 +547,11 @@ void PCUSample_Class::OnBnClickedPCUId()
 				vector<string> obj = split(txt, ",");
 				for (int i = 0; i < obj.size(); i++) {
 					string str1 = obj.at(i);
-					usbresouce.AddString(CString(str1.c_str()));
+					deviceID.AddString(CString(str1.c_str()));
 				}
 			}
 			else {
-				usbresouce.AddString(txt);
+				deviceID.AddString(txt);
 			}
 
 		}
@@ -662,4 +630,39 @@ void PCUSample_Class::OnBnClickedPCURange()
 		::MessageBoxA(NULL, "Load dll fail.", "Fail", MB_OK);
 	}
 
+}
+
+
+void PCUSample_Class::OnBnClickedPcubtnsplit()
+{
+	HINSTANCE hInst = LoadLibrary(_T("librayForMFCInstrument.dll"));
+	if (hInst)
+	{
+
+		typedef void(*pFunc)(char*, char* &, char* &);
+		pFunc Func_GetSplit = (pFunc)GetProcAddress(hInst, "Split");
+		if (Func_GetSplit)
+		{
+			CString resouce = "";
+			char* boad = "";
+			char* address = "";
+
+			gpib_resouce.GetLBText(gpib_resouce.GetCurSel(), resouce);
+
+			Func_GetSplit((LPSTR)(LPCSTR)resouce, boad, address);
+			GetDlgItem(PCUtxtboad)->SetWindowTextA(boad);
+			GetDlgItem(PCUtxtaddressnum)->SetWindowTextA(address);
+		}
+		else
+		{
+			::MessageBoxA(NULL, "Get function fail.", "Fail", MB_OK);
+		}
+		//free library
+		FreeLibrary(hInst);
+		hInst = nullptr;
+	}
+	else
+	{
+		::MessageBoxA(NULL, "Load dll fail.", "Fail", MB_OK);
+	}
 }

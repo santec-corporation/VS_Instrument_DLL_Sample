@@ -924,6 +924,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Mode");
                 return;
             }
 
@@ -943,6 +944,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Input_Trigger_Mode");
                 return;
             }
 
@@ -958,6 +960,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Trigger_Output_Mode");
                 return;
             }
 
@@ -979,6 +982,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Start_Mode");
                 return;
             }
 
@@ -997,6 +1001,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Wavelength");
                 return;
             }
 
@@ -1011,6 +1016,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Delay");
                 return;
             }
 
@@ -1025,6 +1031,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Cycle");
                 return;
             }
 
@@ -1039,6 +1046,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Wavelength_Step");
                 return;
             }
 
@@ -1052,6 +1060,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Trigger_Step");
                 return;
             }
 
@@ -1065,6 +1074,7 @@ namespace Instrument_DLL_Sample
             if (errorcode != 0)
             {
                 Show_Error(errorcode);
+                MessageBox.Show("Get_Sweep_Speed");
                 return;
             }
 
@@ -1075,6 +1085,7 @@ namespace Instrument_DLL_Sample
                 if (errorcode != 0)
                 {
                     Show_Error(errorcode);
+                    MessageBox.Show("Get_TriggerOutput_Source");
                     return;
                 }
                 if (source == TSL.TriggerOut_Source.Wavelength)
@@ -1542,6 +1553,9 @@ namespace Instrument_DLL_Sample
             //  选择USB 通讯
             // --------------------------------------------------------------
 
+            // USB can control Only TSL-570
+            // USB只能控制TSL-570
+
             if (rdiUSB.Checked == true)
             {
                 TextBox1.Text = txtdev_num.Text;         // USB Control Device ID //USB控制设备ID
@@ -1556,6 +1570,9 @@ namespace Instrument_DLL_Sample
             //   LAN Commnuncation Checked
             //   选择 LAN 通讯
             //  --------------------------------------------------------------
+
+            //  LAN communication can control ONLY TSL-570
+            //  LAN通讯只能控制TSL-570
 
             if (rdoLAN.Checked == true)
             {

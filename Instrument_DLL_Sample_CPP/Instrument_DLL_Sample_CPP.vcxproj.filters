@@ -74,12 +74,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\..\Desktop\SANTEC.ICO">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="C:\Users\Ssantec_Test\Desktop\SANTEC.ICO">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="..\SANTEC.ICO">
       <Filter>Resource Files</Filter>
     </Image>

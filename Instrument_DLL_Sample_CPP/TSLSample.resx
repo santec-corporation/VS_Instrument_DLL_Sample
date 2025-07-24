@@ -3084,13 +3084,13 @@
     <value>281, 66</value>
   </data>
   <data name="label68.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
+    <value>101, 13</value>
   </data>
   <data name="label68.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
   <data name="label68.Text" xml:space="preserve">
-    <value>Trigger Source</value>
+    <value>Trigger Source(570)</value>
   </data>
   <data name="&gt;&gt;label68.Name" xml:space="preserve">
     <value>label68</value>
@@ -4682,13 +4682,13 @@
     <value>6, 56</value>
   </data>
   <data name="rdoLAN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>93, 17</value>
   </data>
   <data name="rdoLAN.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="rdoLAN.Text" xml:space="preserve">
-    <value>LAN</value>
+    <value>LAN(TSL-570)</value>
   </data>
   <data name="&gt;&gt;rdoLAN.Name" xml:space="preserve">
     <value>rdoLAN</value>
@@ -4712,13 +4712,13 @@
     <value>235, 22</value>
   </data>
   <data name="rdiUSB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>94, 17</value>
   </data>
   <data name="rdiUSB.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="rdiUSB.Text" xml:space="preserve">
-    <value>USB</value>
+    <value>USB(TSL-570)</value>
   </data>
   <data name="&gt;&gt;rdiUSB.Name" xml:space="preserve">
     <value>rdiUSB</value>

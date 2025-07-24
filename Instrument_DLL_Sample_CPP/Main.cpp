@@ -10,5 +10,5 @@ void Main(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	Instrument_DLL_Sample_CPP::Main form;
-	Application::Run(f3orm);
+	Application::Run(%form);
 }

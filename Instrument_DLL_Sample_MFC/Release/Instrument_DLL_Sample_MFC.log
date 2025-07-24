@@ -1,0 +1,57 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: 参见“MBCS_Support_Deprecated_In_MFC”的声明
+  Instrument_DLL_Sample_MFC.cpp
+  Main.cpp
+  MPMSample_Class.cpp
+  MPM_Communication_Setting.cpp
+MPM_Communication_Setting.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+MPM_Communication_Setting.cpp(160): warning C4018: “<”: 有符号/无符号不匹配
+MPM_Communication_Setting.cpp(212): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(213): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(214): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+MPM_Communication_Setting.cpp(215): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  MPM_Logging1.cpp
+  MPM_Logging2.cpp
+  MPM_Normal_function.cpp
+  OSUSample_Class.cpp
+OSUSample_Class.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+OSUSample_Class.cpp(96): warning C4018: “<”: 有符号/无符号不匹配
+OSUSample_Class.cpp(202): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(203): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(204): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(205): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+OSUSample_Class.cpp(206): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  PCUSample_Class.cpp
+PCUSample_Class.cpp(139): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(140): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(141): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(142): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(143): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(144): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(145): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+PCUSample_Class.cpp(499): warning C4018: “<”: 有符号/无符号不匹配
+PCUSample_Class.cpp(540): warning C4018: “<”: 有符号/无符号不匹配
+PCUSample_Class.cpp(580): warning C4018: “<”: 有符号/无符号不匹配
+  TSLSample_Class.cpp
+  TSL_Communication_Setting.cpp
+TSL_Communication_Setting.cpp(87): warning C4018: “<”: 有符号/无符号不匹配
+TSL_Communication_Setting.cpp(163): warning C4018: “<”: 有符号/无符号不匹配
+TSL_Communication_Setting.cpp(210): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(211): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(212): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(213): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(214): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Communication_Setting.cpp(215): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  TSL_Normal_function.cpp
+  TSL_Sweep_function.cpp
+TSL_Sweep_function.cpp(180): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(220): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(320): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+TSL_Sweep_function.cpp(325): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  All 587 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230811_Ver1.4.0\MFC_exe\x86\Release\Instrument_DLL_Sample_MFC.exe
+  Instrument_DLL_Sample_MFC.vcxproj -> D:\test\NewDll\Instrument_DLL_Sample_20230811_Ver1.4.0\MFC_exe\x86\Release\Instrument_DLL_Sample_MFC.pdb (Full PDB)

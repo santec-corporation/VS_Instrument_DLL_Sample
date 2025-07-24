@@ -1544,19 +1544,4 @@ Public Class TSLSample
         End If
 
     End Sub
-
-    Private Sub rdiUSB_CheckedChanged(sender As Object, e As EventArgs) Handles rdiUSB.CheckedChanged
-        '//  --------------------------------------------------------------
-        '//  USB communcation checked
-        '//  选择USB 通讯
-        '// --------------------------------------------------------------
-
-        If rdiUSB.Checked = True Then
-            TextBox1.Text = txtdev_num.Text      ' // USB Control Device ID //USB控制设备ID
-            txtPort.Enabled = True
-            txtPort.Text = "5000"
-        End If
-
-
-    End Sub
 End Class

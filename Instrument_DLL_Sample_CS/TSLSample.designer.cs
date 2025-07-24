@@ -167,7 +167,6 @@
             this.BtnLD_ON = new System.Windows.Forms.Button();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.rdo770 = new System.Windows.Forms.RadioButton();
             this.rdo570 = new System.Windows.Forms.RadioButton();
             this.rdo550 = new System.Windows.Forms.RadioButton();
             this.BtnDisConnect = new System.Windows.Forms.Button();
@@ -228,6 +227,7 @@
             this.cmb570_Speed = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
             this.btnSpeed = new System.Windows.Forms.Button();
+            this.rdo770 = new System.Windows.Forms.RadioButton();
             this.GroupBox13.SuspendLayout();
             this.GroupBox12.SuspendLayout();
             this.GroupBox15.SuspendLayout();
@@ -712,9 +712,9 @@
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(276, 66);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(77, 13);
+            this.label48.Size = new System.Drawing.Size(101, 13);
             this.label48.TabIndex = 28;
-            this.label48.Text = "Trigger Source";
+            this.label48.Text = "Trigger Source(570)";
             // 
             // Btn_Other
             // 
@@ -1657,17 +1657,6 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Target";
             // 
-            // rdo770
-            // 
-            this.rdo770.AutoSize = true;
-            this.rdo770.Location = new System.Drawing.Point(22, 65);
-            this.rdo770.Name = "rdo770";
-            this.rdo770.Size = new System.Drawing.Size(66, 17);
-            this.rdo770.TabIndex = 2;
-            this.rdo770.Text = "TSL-770";
-            this.rdo770.UseVisualStyleBackColor = true;
-            this.rdo770.CheckedChanged += new System.EventHandler(this.rdo770_CheckedChanged);
-            // 
             // rdo570
             // 
             this.rdo570.AutoSize = true;
@@ -1983,9 +1972,9 @@
             this.rdoLAN.Enabled = false;
             this.rdoLAN.Location = new System.Drawing.Point(6, 56);
             this.rdoLAN.Name = "rdoLAN";
-            this.rdoLAN.Size = new System.Drawing.Size(46, 17);
+            this.rdoLAN.Size = new System.Drawing.Size(93, 17);
             this.rdoLAN.TabIndex = 20;
-            this.rdoLAN.Text = "LAN";
+            this.rdoLAN.Text = "LAN(TSL-570)";
             this.rdoLAN.UseVisualStyleBackColor = true;
             this.rdoLAN.CheckedChanged += new System.EventHandler(this.rdoLAN_CheckedChanged);
             // 
@@ -1995,9 +1984,9 @@
             this.rdiUSB.Enabled = false;
             this.rdiUSB.Location = new System.Drawing.Point(235, 22);
             this.rdiUSB.Name = "rdiUSB";
-            this.rdiUSB.Size = new System.Drawing.Size(47, 17);
+            this.rdiUSB.Size = new System.Drawing.Size(94, 17);
             this.rdiUSB.TabIndex = 19;
-            this.rdiUSB.Text = "USB";
+            this.rdiUSB.Text = "USB(TSL-570)";
             this.rdiUSB.UseVisualStyleBackColor = true;
             this.rdiUSB.CheckedChanged += new System.EventHandler(this.rdiUSB_CheckedChanged);
             // 
@@ -2312,6 +2301,17 @@
             this.btnSpeed.Text = "Get speed table";
             this.btnSpeed.UseVisualStyleBackColor = true;
             this.btnSpeed.Click += new System.EventHandler(this.btnSpeed_Click);
+            // 
+            // rdo770
+            // 
+            this.rdo770.AutoSize = true;
+            this.rdo770.Location = new System.Drawing.Point(22, 65);
+            this.rdo770.Name = "rdo770";
+            this.rdo770.Size = new System.Drawing.Size(66, 17);
+            this.rdo770.TabIndex = 2;
+            this.rdo770.Text = "TSL-770";
+            this.rdo770.UseVisualStyleBackColor = true;
+            this.rdo770.CheckedChanged += new System.EventHandler(this.rdo770_CheckedChanged);
             // 
             // TSLSample
             // 

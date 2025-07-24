@@ -448,7 +448,6 @@ namespace Instrument_DLL_Sample_CPP {
 			this->cmbgpib_resouce = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox17 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox18 = (gcnew System::Windows::Forms::GroupBox());
-			this->rdo770 = (gcnew System::Windows::Forms::RadioButton());
 			this->rdo570 = (gcnew System::Windows::Forms::RadioButton());
 			this->rdo550 = (gcnew System::Windows::Forms::RadioButton());
 			this->groupBox20 = (gcnew System::Windows::Forms::GroupBox());
@@ -474,6 +473,7 @@ namespace Instrument_DLL_Sample_CPP {
 			this->cmb570_Speed = (gcnew System::Windows::Forms::ComboBox());
 			this->label65 = (gcnew System::Windows::Forms::Label());
 			this->btnSpeed = (gcnew System::Windows::Forms::Button());
+			this->rdo770 = (gcnew System::Windows::Forms::RadioButton());
 			this->GroupBox7->SuspendLayout();
 			this->GroupBox8->SuspendLayout();
 			this->GroupBox6->SuspendLayout();
@@ -1678,13 +1678,6 @@ namespace Instrument_DLL_Sample_CPP {
 			this->groupBox18->Name = L"groupBox18";
 			this->groupBox18->TabStop = false;
 			// 
-			// rdo770
-			// 
-			resources->ApplyResources(this->rdo770, L"rdo770");
-			this->rdo770->Name = L"rdo770";
-			this->rdo770->UseVisualStyleBackColor = true;
-			this->rdo770->CheckedChanged += gcnew System::EventHandler(this, &TSLSample::rdo770_CheckedChanged);
-			// 
 			// rdo570
 			// 
 			resources->ApplyResources(this->rdo570, L"rdo570");
@@ -1904,6 +1897,13 @@ namespace Instrument_DLL_Sample_CPP {
 			this->btnSpeed->Name = L"btnSpeed";
 			this->btnSpeed->UseVisualStyleBackColor = true;
 			this->btnSpeed->Click += gcnew System::EventHandler(this, &TSLSample::btnSpeed_Click);
+			// 
+			// rdo770
+			// 
+			resources->ApplyResources(this->rdo770, L"rdo770");
+			this->rdo770->Name = L"rdo770";
+			this->rdo770->UseVisualStyleBackColor = true;
+			this->rdo770->CheckedChanged += gcnew System::EventHandler(this, &TSLSample::rdo770_CheckedChanged);
 			// 
 			// TSLSample
 			// 
@@ -3353,6 +3353,10 @@ namespace Instrument_DLL_Sample_CPP {
 		//  选择USB 通讯
 		// --------------------------------------------------------------
 
+		// USB can control Only TSL-570
+		// USB只能控制TSL-570
+
+
 		if (rdiUSB->Checked == true)
 		{
 			TextBox1->Text = txtdev_num->Text;         // USB Control Device ID //USB控制设备ID
@@ -3471,5 +3475,5 @@ namespace Instrument_DLL_Sample_CPP {
 			BtnAtt_value->Enabled = false;
 		}
 	}
-	};
+};
 }

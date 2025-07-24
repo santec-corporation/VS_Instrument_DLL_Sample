@@ -46,7 +46,6 @@ public:
 	afx_msg void OnBnClickedrdolanpcu();
 	afx_msg void OnBnClickedrdo100();
 	afx_msg void OnBnClickedrdo110();
-	afx_msg void OnBnClickedPcubtnsplit();
 	afx_msg void OnBnClickedPcubtnconnect();
 	afx_msg void OnBnClickedPcubtndisconnect();
 	afx_msg void OnBnClickedPcubtngetip();
@@ -66,4 +65,5 @@ public:
 	afx_msg void OnBnClickedPCUId();
 	afx_msg void OnBnClickedPCUSop();
 	afx_msg void OnBnClickedPCURange();
+	afx_msg void OnBnClickedPcubtnsplit();
 };

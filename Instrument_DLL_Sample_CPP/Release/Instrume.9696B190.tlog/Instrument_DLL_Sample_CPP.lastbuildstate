@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.5.2:PlatformToolSet=v140:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Release|Win32|D:\test\NewDll\Instrument_DLL_Sample_20230811_Ver1.4.0\|

@@ -1160,7 +1160,7 @@ namespace Instrument_DLL_Sample_CPP {
 		//---------------------------------------------------
 		int errorcode;
 
-		errorcode = PCU.Range_Adjust();
+		errorcode = PCU.Range_Adjust(0);
 		if (errorcode != 0)
 		{
 			Show_Error(errorcode);

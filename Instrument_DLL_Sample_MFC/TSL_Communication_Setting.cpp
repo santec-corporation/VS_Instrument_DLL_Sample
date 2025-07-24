@@ -51,18 +51,21 @@ END_MESSAGE_MAP()
 
 // TSL_Communication_Setting 消息处理程序
 
-vector<CString> SplitCString(CString strSource, CString ch)
-{
-	vector <CString> vecString;
-	int iPos = 0;
-	CString strTmp;
-	strTmp = strSource.Tokenize(ch, iPos);
-	while (strTmp.Trim() != _T(""))
-	{
-		vecString.push_back(strTmp);
-		strTmp = strSource.Tokenize(ch, iPos);
+inline vector<string> split(const string& s, const string& seperator) {
+	vector<string> result;
+	unsigned int posBegin = 0;
+	unsigned int posSeperator = s.find(seperator);
+
+	while (posSeperator != s.npos) {
+		result.push_back(s.substr(posBegin, posSeperator - posBegin));// 
+		posBegin = posSeperator + seperator.size();
+		posSeperator = s.find(seperator, posBegin);
+
 	}
-	return vecString;
+	if (posBegin != s.length())
+		result.push_back(s.substr(posBegin));
+
+	return result;
 }
 
 void TSL_Communication_Setting::OnBnClickedVisa()
@@ -77,12 +80,13 @@ void TSL_Communication_Setting::OnBnClickedVisa()
 		{
 			char* txt = "";
 			Func_GetVisa(txt);
-			CString SPU = txt;
-			int cnt = SPU.Find(_T(","));
+			string SPU = txt;
+			int cnt = SPU.find(_T(","));
 			if (cnt >= 0) {
-				vector<CString> obj = SplitCString(txt, ",");
+				vector<string> obj = split(txt, ",");
 				for (int i = 0; i < obj.size(); i++) {
-					cmbgpib_resouces.AddString(obj.at(i));
+					string str1 = obj.at(i);
+					cmbgpib_resouces.AddString(CString(str1.c_str()));
 				}
 			}
 			else {
@@ -152,12 +156,13 @@ void TSL_Communication_Setting::OnBnClickedresouce()
 		{
 			char* txt = "";
 			Func_GetUsb_resouce(txt);
-			CString SPU = txt;
-			int cnt = SPU.Find(_T(","));
+			string SPU = txt;
+			int cnt = SPU.find(_T(","));
 			if (cnt >= 0) {
-				vector<CString> obj = SplitCString(txt, ",");
+				vector<string> obj = split(txt, ",");
 				for (int i = 0; i < obj.size(); i++) {
-					cmbusbresouces.AddString(obj.at(i));
+					string str1 = obj.at(i);
+					cmbusbresouces.AddString(CString(str1.c_str()));
 				}
 			}
 			else {
@@ -210,20 +215,20 @@ void TSL_Communication_Setting::OnBnClickedBtnconnect()
 			bool Lf_Checked = ((CButton *)GetDlgItem(TSLrdiLf))->GetCheck();
 
 			Func_TSL_Connect(Informations, (LPSTR)(LPCSTR)address, (LPSTR)(LPCSTR)Board, USB_Checked, LAN_Checked, (LPSTR)(LPCSTR)port, kysightvisa_Checked, NI488_Checked, Cr_Checked, Lf_Checked);
-			CString SPU = Informations;
-			int cnt = SPU.Find(_T(","));
+			string SPU = Informations;
+			int cnt = SPU.find(_T(","));
 			if (cnt >= 0)
 			{
-				vector<CString> obj = SplitCString(Informations, ",");
-				GetDlgItem(TSLlblproductname)->SetWindowTextA(obj.at(0));
-				GetDlgItem(TSLlblserial)->SetWindowTextA(obj.at(1));
-				GetDlgItem(TSLlblfwversion)->SetWindowTextA(obj.at(2));
-				GetDlgItem(TSLlblwave)->SetWindowTextA(obj.at(3));
-				GetDlgItem(TSLlblfreq)->SetWindowTextA(obj.at(4));
-				GetDlgItem(TSLlblATTrange)->SetWindowTextA(obj.at(5));
-				GetDlgItem(TSLlblAPC1)->SetWindowTextA(obj.at(6));
-				GetDlgItem(TSLlblACP2)->SetWindowTextA(obj.at(7));
-				GetDlgItem(TSLlblSweepSpeed_Range)->SetWindowTextA(obj.at(8));
+				vector<string> obj = split(Informations, ",");
+				GetDlgItem(TSLlblproductname)->SetWindowTextA(CString(obj.at(0).c_str()));
+				GetDlgItem(TSLlblserial)->SetWindowTextA(CString(obj.at(1).c_str()));
+				GetDlgItem(TSLlblfwversion)->SetWindowTextA(CString(obj.at(2).c_str()));
+				GetDlgItem(TSLlblwave)->SetWindowTextA(CString(obj.at(3).c_str()));
+				GetDlgItem(TSLlblfreq)->SetWindowTextA(CString(obj.at(4).c_str()));
+				GetDlgItem(TSLlblATTrange)->SetWindowTextA(CString(obj.at(5).c_str()));
+				GetDlgItem(TSLlblAPC1)->SetWindowTextA(CString(obj.at(6).c_str()));
+				GetDlgItem(TSLlblACP2)->SetWindowTextA(CString(obj.at(7).c_str()));
+				GetDlgItem(TSLlblSweepSpeed_Range)->SetWindowTextA(CString(obj.at(8).c_str()));
 			}
 			else
 			{
@@ -286,9 +291,8 @@ void TSL_Communication_Setting::OnBnClickedBtndisconnect()
 void TSL_Communication_Setting::OnBnClickedrdo550()
 {
 	if (((CButton *)GetDlgItem(TSLrdo550))->GetCheck())
-	{
-		// TSL-550 can't Control from LAN & USB			
-		// TSL-550不能从LAN和USB控制
+	{		// TSL-550 can't Control from LAN & USB
+			// TSL-550不能从LAN和USB控制
 		GetDlgItem(TSLrdiUSB)->EnableWindow(FALSE);
 		GetDlgItem(TSLrdoLAN)->EnableWindow(FALSE);
 		GetDlgItem(TSLtxtPort)->EnableWindow(FALSE);
@@ -324,6 +328,8 @@ void TSL_Communication_Setting::OnBnClickedrdiusb()
 	//  选择USB 通讯
 	// --------------------------------------------------------------
 
+	// USB can control Only TSL-570
+	// USB只能控制TSL-570
 	if (((CButton *)GetDlgItem(TSLrdiUSB))->GetCheck())
 	{
 		CString resouce = "";

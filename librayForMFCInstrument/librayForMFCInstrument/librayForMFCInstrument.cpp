@@ -2733,7 +2733,7 @@ extern "C" __declspec(dllexport) void PCU_Adjust_Range()
 	librayForMFCInstrument::Class1 ^obj = librayForMFCInstrument::Class1::get_instance();
 	int errorcode;
 
-	errorcode = obj->pcu.Range_Adjust();
+	errorcode = obj->pcu.Range_Adjust(0);
 
 	if (errorcode != 0)
 	{
