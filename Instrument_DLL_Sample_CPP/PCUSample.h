@@ -31,7 +31,7 @@ namespace Instrument_DLL_Sample_CPP {
 	internal: System::Windows::Forms::Label^  Label16;
 	internal: System::Windows::Forms::TextBox^  txtip_add;
 	internal: System::Windows::Forms::Button^  btnGetIP;
-			  PCU PCU;//pcu control class/ / pcu控制类
+			  PCU ^pcu;//pcu control class/ / pcu控制类
 
 	protected:
 		/// <summary>
@@ -953,7 +953,17 @@ namespace Instrument_DLL_Sample_CPP {
 		String^ port = String::Empty;
 		Communication::GPIBConnectType gpib_type;
 		Communication::CommunicationMethod com_method;
-
+		if (rdo100->Checked == true) 
+		{
+			// ---Target PCU-100
+			// ---目标 PCU-100
+			pcu = gcnew PCU(true);
+			pcu->DeviceName = txt100controlid->Text;
+		}
+		else
+		{
+			pcu = gcnew PCU(false);
+		}
 		// -------Communication Method
 		// -------连接的方法
 
@@ -973,14 +983,14 @@ namespace Instrument_DLL_Sample_CPP {
 			else
 				gpib_type = Communication::GPIBConnectType::NI4882;
 
-			PCU.GPIBAddress = int::Parse(txtaddress->Text);
+			pcu->GPIBAddress = int::Parse(txtaddress->Text);
 			if (txtboad->Text == "")
 			{
-				PCU.GPIBBoard = 0;
+				pcu->GPIBBoard = 0;
 			}
 			else
 			{
-				PCU.GPIBBoard = Convert::ToInt32(txtboad->Text);
+				pcu->GPIBBoard = Convert::ToInt32(txtboad->Text);
 			}
 		}
 
@@ -990,9 +1000,9 @@ namespace Instrument_DLL_Sample_CPP {
 			// -----LAN Communication
 			// -----LAN通讯
 			com_method = Santec::Communication::CommunicationMethod::TCPIP;
-			PCU.IPAddress = txtaddress->Text;
-			PCU.Port = int::Parse(txtport->Text);
-			PCU.Waittime = 20;
+			pcu->IPAddress = txtaddress->Text;
+			pcu->Port = int::Parse(txtport->Text);
+			pcu->Waittime = 20;
 		}
 
 
@@ -1001,15 +1011,11 @@ namespace Instrument_DLL_Sample_CPP {
 			// -----USB communucation
 			// -----USB通讯
 			com_method = Santec::Communication::CommunicationMethod::USB;
-			PCU.DeviceID = int::Parse(txtaddress->Text);                       // USB control device id// USB控制设备id
-			PCU.TimeOut = 5000;
+			pcu->DeviceID = int::Parse(txtaddress->Text);                       // USB control device id// USB控制设备id
+			pcu->TimeOut = 5000;
 		}
 
 
-		if (rdo100->Checked == true)
-			// ---Target PCU-100
-			// ---目标 PCU-100
-			PCU.DeviceName = txt100controlid->Text;
 
 		// ---Tarminater
 		// ---终止符
@@ -1022,13 +1028,13 @@ namespace Instrument_DLL_Sample_CPP {
 		else
 			termineter = CommunicationTerminator::CrLf;
 
-		PCU.Terminator = termineter;
+		pcu->Terminator = termineter;
 
 		String^ ans = String::Empty;
 		int errorcode;
 		// --Connect
 		// --连接
-		errorcode = PCU.Connect(com_method);
+		errorcode = pcu->Connect(com_method);
 
 		if (errorcode != 0)
 		{
@@ -1038,15 +1044,15 @@ namespace Instrument_DLL_Sample_CPP {
 
 		// -----Show information
 		// -----显示信息
-		lblprduct->Text = PCU.Information->ProductName;
-		lblserial->Text = PCU.Information->SerialNumber;
-		lblvesion->Text = PCU.Information->FWversion;
-		lblwavelength->Text = PCU.Information->Band;
+		lblprduct->Text = pcu->Information->ProductName;
+		lblserial->Text = pcu->Information->SerialNumber;
+		lblvesion->Text = pcu->Information->FWversion;
+		lblwavelength->Text = pcu->Information->Band;
 
 		// -----Add set SOP to combbox
 		// -----添加set SOP到combbox
 
-		if (PCU.Information->ProductName == "PCU-110")
+		if (pcu->Information->ProductName == "PCU-110")
 		{
 			cmbsop->Items->Add("LVP");
 			cmbsop->Items->Add("LHP");
@@ -1090,7 +1096,7 @@ namespace Instrument_DLL_Sample_CPP {
 		// 断开连接
 		// -----------------------------------------------------------
 
-		PCU.DisConnect();
+		pcu->DisConnect();
 
 		lblprduct->Text = "";
 		lblserial->Text = "";
@@ -1144,7 +1150,7 @@ namespace Instrument_DLL_Sample_CPP {
 		{
 			sop_stauts = PCU::SOP_Stauts::LCP;
 		}
-		errorcode = PCU.Set_SOP_Stauts(sop_stauts);
+		errorcode = pcu->Set_SOP_Stauts(sop_stauts);
 
 		if (errorcode != 0)
 		{
@@ -1160,7 +1166,7 @@ namespace Instrument_DLL_Sample_CPP {
 		//---------------------------------------------------
 		int errorcode;
 
-		errorcode = PCU.Range_Adjust(0);
+		errorcode = pcu->Range_Adjust(0);
 		if (errorcode != 0)
 		{
 			Show_Error(errorcode);
@@ -1177,7 +1183,7 @@ namespace Instrument_DLL_Sample_CPP {
 		int errorcode;
 		int range;
 
-		errorcode = PCU.Get_Power_Range(range);
+		errorcode = pcu->Get_Power_Range(range);
 
 		if (errorcode != 0)
 		{
@@ -1346,9 +1352,9 @@ namespace Instrument_DLL_Sample_CPP {
 		array<System::String^>^ id = nullptr;
 		int errorcode;
 		int loop1;
+		pcu = gcnew PCU(true);
 
-
-		errorcode = PCU.Get_Device_ID(id);
+		errorcode = pcu->Get_Device_ID(id);
 
 		if (errorcode != 0 | id->Length == 0)
 			return;
@@ -1366,7 +1372,7 @@ namespace Instrument_DLL_Sample_CPP {
 		int errorcode;
 		String^ address = String::Empty;
 
-		errorcode = PCU.Get_IPAddress(address);
+		errorcode = pcu->Get_IPAddress(address);
 
 		if (errorcode != 0)
 		{
@@ -1377,24 +1383,24 @@ namespace Instrument_DLL_Sample_CPP {
 		txtip_add->Text = address;
 	}
 
-private: System::Void btnGetPort_Click(System::Object^  sender, System::EventArgs^  e) {
-	// -----------------------------------------------------
-	// Get LAN Port number
-	// this function only support for PCU-110
-	// 获取LAN端口号
-	// 这个功能只支持PCU-110
-	// -----------------------------------------------------
-	int errorcode;
-	int port ;
+	private: System::Void btnGetPort_Click(System::Object^  sender, System::EventArgs^  e) {
+		// -----------------------------------------------------
+		// Get LAN Port number
+		// this function only support for PCU-110
+		// 获取LAN端口号
+		// 这个功能只支持PCU-110
+		// -----------------------------------------------------
+		int errorcode;
+		int port;
 
-	errorcode = PCU.Get_LAN_Portnumber(port);
+		errorcode = pcu->Get_LAN_Portnumber(port);
 
-	if (errorcode != 0)
-	{
-		Show_Error(errorcode);
-		return;
+		if (errorcode != 0)
+		{
+			Show_Error(errorcode);
+			return;
+		}
+		txtlan_port->Text = port.ToString();
 	}
-	txtlan_port->Text = port.ToString();
-}
-};
+	};
 }

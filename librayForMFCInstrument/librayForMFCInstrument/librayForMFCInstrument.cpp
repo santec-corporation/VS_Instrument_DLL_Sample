@@ -72,9 +72,9 @@ extern "C" __declspec(dllexport) void Get_Device_ID(char* &Str)
 	// 获取PCU-100控制设备id
 	//----------------------------------------------
 	librayForMFCInstrument::Class1 ^obj = librayForMFCInstrument::Class1::get_instance();
-
+	obj->pcu = gcnew PCU(true);
 	array<System::String^>^resouce;
-    obj->pcu.Get_Device_ID(resouce);
+    obj->pcu->Get_Device_ID(resouce);
 	String^ returnStr = "";
 
 	for (int i = 0; i < resouce->Length; i++)
@@ -2575,14 +2575,23 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 	String^ port = String::Empty;
 	Communication::GPIBConnectType gpib_type;
 	Communication::CommunicationMethod com_method;
-
+	if (rdo100 == true) {
+		// ---Target PCU-100
+		// ---目标 PCU-100
+		obj->pcu = gcnew PCU(true);
+		obj->pcu->DeviceName = gcnew String(txt100controlid);
+	}
+	else
+	{
+		obj->pcu = gcnew PCU(false);
+	}
 	if (rdiUSB == true)
 	{
 		// USB Communication
 		// USB通信
 		com_method = Santec::Communication::CommunicationMethod::USB;
-		obj->pcu.DeviceID = UInt32::Parse(gcnew String(address));
-		obj->pcu.TimeOut = 5000;
+		obj->pcu->DeviceID = UInt32::Parse(gcnew String(address));
+		obj->pcu->TimeOut = 5000;
 
 	}
 	else if (rdoLAN == true)
@@ -2590,9 +2599,9 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 		// LAN Communication
 		// LAN 通信
 		com_method = Santec::Communication::CommunicationMethod::TCPIP;
-		obj->pcu.Port = int::Parse(gcnew String(txtPort));
-		obj->pcu.IPAddress = gcnew String(address);
-		obj->pcu.Waittime = 20;
+		obj->pcu->Port = int::Parse(gcnew String(txtPort));
+		obj->pcu->IPAddress = gcnew String(address);
+		obj->pcu->Waittime = 20;
 	}
 
 	else
@@ -2609,8 +2618,8 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 		else
 			gpib_type = Santec::Communication::GPIBConnectType::NIVisa;
 
-		obj->pcu.GPIBAddress = System::Convert::ToInt32(address);
-		obj->pcu.GPIBBoard = int::Parse(gcnew String(Board));;
+		obj->pcu->GPIBAddress = System::Convert::ToInt32(address);
+		obj->pcu->GPIBBoard = int::Parse(gcnew String(Board));;
 	}
 
 	// ----------------Common
@@ -2618,10 +2627,7 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 	// Terminator
 	// 终止符
 	CommunicationTerminator terminator;
-	if (rdo100 == true)
-		// ---Target PCU-100
-		// ---目标 PCU-100
-		obj->pcu.DeviceName = gcnew String(txt100controlid);
+
 
 	if (rdiCr == true)
 		terminator = Santec::CommunicationTerminator::Cr;
@@ -2630,13 +2636,13 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 	else
 		terminator = Santec::CommunicationTerminator::CrLf;
 
-	obj->pcu.Terminator = terminator;
+	obj->pcu->Terminator = terminator;
 
 
 	String^ ans;
 	int errorcode;
 
-	errorcode = obj->pcu.Connect(com_method);
+	errorcode = obj->pcu->Connect(com_method);
 
 	if (errorcode != 0)
 	{
@@ -2647,10 +2653,10 @@ extern "C" __declspec(dllexport) void PCU_Connect(char* &Informations, char*txta
 	// --PCU information
 	// --PCU信息
 	String^ Information = "";
-	Information = obj->pcu.Information->ProductName + ",";
-	Information = Information + obj->pcu.Information->SerialNumber + ",";
-	Information = Information + obj->pcu.Information->FWversion + ",";
-	Information = Information + obj->pcu.Information->Band;
+	Information = obj->pcu->Information->ProductName + ",";
+	Information = Information + obj->pcu->Information->SerialNumber + ",";
+	Information = Information + obj->pcu->Information->FWversion + ",";
+	Information = Information + obj->pcu->Information->Band;
 	Informations = (char*)(void*)Marshal::StringToHGlobalAnsi(Information);
 }
 extern "C" __declspec(dllexport) void PCU_DisConnect()
@@ -2662,7 +2668,7 @@ extern "C" __declspec(dllexport) void PCU_DisConnect()
 	librayForMFCInstrument::Class1 ^obj = librayForMFCInstrument::Class1::get_instance();
 	int errorcode;
 
-	errorcode = obj->pcu.DisConnect();
+	errorcode = obj->pcu->DisConnect();
 
 	if (errorcode != 0)
 	{
@@ -2716,7 +2722,7 @@ extern "C" __declspec(dllexport) void PCU_Set_SOP(char* cmbsop)
 	{
 		sop_stauts = PCU::SOP_Stauts::LCP;
 	}
-	errorcode = obj->pcu.Set_SOP_Stauts(sop_stauts);
+	errorcode = obj->pcu->Set_SOP_Stauts(sop_stauts);
 
 	if (errorcode != 0)
 	{
@@ -2733,7 +2739,7 @@ extern "C" __declspec(dllexport) void PCU_Adjust_Range()
 	librayForMFCInstrument::Class1 ^obj = librayForMFCInstrument::Class1::get_instance();
 	int errorcode;
 
-	errorcode = obj->pcu.Range_Adjust(0);
+	errorcode = obj->pcu->Range_Adjust(0);
 
 	if (errorcode != 0)
 	{
@@ -2751,7 +2757,7 @@ extern "C" __declspec(dllexport) void PCU_Get_Range(char* &txtcurrentrange)
 	int errorcode;
 	int range;
 
-	errorcode = obj->pcu.Get_Power_Range(range);
+	errorcode = obj->pcu->Get_Power_Range(range);
 
 	if (errorcode != 0)
 	{
@@ -2772,7 +2778,7 @@ extern "C" __declspec(dllexport) void PCU_Get_IP(char* &txtip_add)
 	int errorcode;
 	String^ address = String::Empty;
 
-	errorcode = obj->pcu.Get_IPAddress(address);
+	errorcode = obj->pcu->Get_IPAddress(address);
 
 	if (errorcode != 0)
 	{
@@ -2793,7 +2799,7 @@ extern "C" __declspec(dllexport) void PCU_Get_Port(char* &txtlan_port)
 	int errorcode;
 	int port;
 
-	errorcode = obj->pcu.Get_LAN_Portnumber(port);
+	errorcode = obj->pcu->Get_LAN_Portnumber(port);
 
 	if (errorcode != 0)
 	{
@@ -2856,7 +2862,7 @@ extern "C" __declspec(dllexport) void OSU_Connect(char* cmbdevname, char*txtaddr
 	if (rdo110)
 	{
 		// OSU-110
-
+		obj->osu = gcnew OSU(false);
 		obj->osu->Terminator = CommunicationTerminator::Cr;
 
 		if (rdiUSB== true)
@@ -2906,6 +2912,7 @@ extern "C" __declspec(dllexport) void OSU_Connect(char* cmbdevname, char*txtaddr
 	else
 	{
 		// OSU-100
+		obj->osu = gcnew OSU(true);
 		String^ devname = gcnew String(cmbdevname);
 		if (devname == "")
 		{

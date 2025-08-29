@@ -276,7 +276,7 @@
             this.GroupBox10.Controls.Add(this.btnUsb_resouce);
             this.GroupBox10.Controls.Add(this.cmbusbresouce);
             this.GroupBox10.Controls.Add(this.cmbgpib_resouce);
-            this.GroupBox10.Location = new System.Drawing.Point(30, 20);
+            this.GroupBox10.Location = new System.Drawing.Point(12, 12);
             this.GroupBox10.Name = "GroupBox10";
             this.GroupBox10.Size = new System.Drawing.Size(746, 105);
             this.GroupBox10.TabIndex = 6;
@@ -447,7 +447,7 @@
             this.GroupBox1.Controls.Add(this.GroupBox3);
             this.GroupBox1.Controls.Add(this.Label2);
             this.GroupBox1.Controls.Add(this.txtaddress);
-            this.GroupBox1.Location = new System.Drawing.Point(30, 131);
+            this.GroupBox1.Location = new System.Drawing.Point(12, 123);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(746, 293);
             this.GroupBox1.TabIndex = 4;
@@ -694,7 +694,7 @@
             this.GroupBox5.Controls.Add(this.btnGetIP);
             this.GroupBox5.Controls.Add(this.GroupBox7);
             this.GroupBox5.Controls.Add(this.GroupBox6);
-            this.GroupBox5.Location = new System.Drawing.Point(30, 430);
+            this.GroupBox5.Location = new System.Drawing.Point(12, 422);
             this.GroupBox5.Name = "GroupBox5";
             this.GroupBox5.Size = new System.Drawing.Size(746, 152);
             this.GroupBox5.TabIndex = 5;
@@ -759,7 +759,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 592);
+            this.ClientSize = new System.Drawing.Size(768, 592);
             this.Controls.Add(this.GroupBox10);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.GroupBox5);

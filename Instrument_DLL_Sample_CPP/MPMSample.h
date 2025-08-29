@@ -657,7 +657,7 @@ namespace Instrument_DLL_Sample_CPP {
 			this->GroupBox12->Size = System::Drawing::Size(708, 94);
 			this->GroupBox12->TabIndex = 2;
 			this->GroupBox12->TabStop = false;
-			this->GroupBox12->Text = L"FreerunMode";
+			this->GroupBox12->Text = L"Freerun Mode";
 			// 
 			// Label65
 			// 

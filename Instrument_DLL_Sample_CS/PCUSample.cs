@@ -10,7 +10,7 @@ namespace Instrument_DLL_Sample
         {
             InitializeComponent();
         }
-        PCU PCU = new PCU(); //pcu control class/ / pcu控制类
+        PCU PCU ; //pcu control class // pcu控制类
         private void Show_Error(int errordata)
         {
             // ------------------------------------
@@ -43,6 +43,18 @@ namespace Instrument_DLL_Sample
             string port = string.Empty;
             Santec.Communication.GPIBConnectType gpib_type;
             Santec.Communication.CommunicationMethod com_method = new Santec.Communication.CommunicationMethod();
+
+            if (rdo100.Checked == true)
+            {
+                // ---Target PCU-100
+                // ---目标 PCU-100
+                PCU = new PCU(true);
+                PCU.DeviceName = txt100controlid.Text;
+            }
+            else
+            {
+                PCU = new PCU(false);
+            }
 
             // -------Communication Method
             // -------连接的方法
@@ -95,10 +107,6 @@ namespace Instrument_DLL_Sample
             }
 
 
-            if (rdo100.Checked == true)
-                // ---Target PCU-100
-                // ---目标 PCU-100
-                PCU.DeviceName = txt100controlid.Text;
 
 
             // ---Tarminater
@@ -352,7 +360,7 @@ namespace Instrument_DLL_Sample
             string[] id = null;
             int errorcode;
             int loop1;
-
+            PCU = new PCU(true);
 
             errorcode = PCU.Get_Device_ID(ref id);
 

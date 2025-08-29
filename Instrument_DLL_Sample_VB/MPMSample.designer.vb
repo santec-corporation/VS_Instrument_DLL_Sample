@@ -1686,7 +1686,7 @@ Partial Class MPMSample
         Me.GroupBox12.Size = New System.Drawing.Size(708, 94)
         Me.GroupBox12.TabIndex = 2
         Me.GroupBox12.TabStop = False
-        Me.GroupBox12.Text = "FreerunMode"
+        Me.GroupBox12.Text = "Freerun Mode"
         '
         'Label65
         '

@@ -4418,13 +4418,13 @@
     <value>21, 65</value>
   </data>
   <data name="rdo770.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+    <value>89, 17</value>
   </data>
   <data name="rdo770.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="rdo770.Text" xml:space="preserve">
-    <value>TSL-770</value>
+    <value>TSL-770/775</value>
   </data>
   <data name="&gt;&gt;rdo770.Name" xml:space="preserve">
     <value>rdo770</value>

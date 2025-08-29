@@ -1732,7 +1732,7 @@
             this.GroupBox12.Size = new System.Drawing.Size(708, 94);
             this.GroupBox12.TabIndex = 2;
             this.GroupBox12.TabStop = false;
-            this.GroupBox12.Text = "FreerunMode";
+            this.GroupBox12.Text = "Freerun Mode";
             // 
             // Label65
             // 

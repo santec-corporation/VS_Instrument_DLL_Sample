@@ -1,6 +1,6 @@
 ﻿Imports Santec
 Public Class PCUSample
-    Private PCU As New PCU                     'pcu control Class/ / pcu控制类
+    Private PCU                      'pcu control Class/ / pcu控制类
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' --------------------------------------------------------------
         ' Form Load
@@ -239,7 +239,7 @@ Public Class PCUSample
         Dim errorcode As Integer
         Dim loop1 As Integer
 
-
+        PCU = New PCU(True)
         errorcode = PCU.Get_Device_ID(id)
 
         If errorcode <> 0 Or id.Length = 0 Then
@@ -260,6 +260,15 @@ Public Class PCUSample
         Dim port As String = String.Empty
         Dim gpib_type As Santec.Communication.GPIBConnectType
         Dim com_method As Communication.CommunicationMethod
+        If Me.rdo100.Checked = True Then
+            ' ---Target PCU-100
+            ' ---目标 PCU-100
+            PCU = New PCU(True)
+            PCU.DeviceName = Me.txt100controlid.Text
+        Else
+            PCU = New PCU(False)
+        End If
+
 
         ' -------Communication Method
         ' -------连接的方法
@@ -309,11 +318,7 @@ Public Class PCUSample
         End If
 
 
-        If Me.rdo100.Checked = True Then
-            ' ---Target PCU-100
-            ' ---目标 PCU-100
-            PCU.DeviceName = Me.txt100controlid.Text
-        End If
+
 
         ' ---Tarminater
         ' ---终止符

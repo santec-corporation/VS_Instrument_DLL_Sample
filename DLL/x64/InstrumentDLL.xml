@@ -2498,7 +2498,7 @@
              OSU　Information
             </summary>
         </member>
-        <member name="M:Santec.OSU.#ctor">
+        <member name="M:Santec.OSU.#ctor(System.Boolean)">
             <summary>
             constructor
             </summary>
@@ -2825,7 +2825,7 @@
              PCU　Information
             </summary>
         </member>
-        <member name="M:Santec.PCU.#ctor">
+        <member name="M:Santec.PCU.#ctor(System.Boolean)">
             <summary>
             constructor
             </summary>
