@@ -457,3 +457,6 @@ $RECYCLE.BIN/
 nuget.config
 /NorthwestUniversity.Server/Output
 /NorthwestUniversity.Client.Desktop/Output
+
+# Ignore other files
+*.metagen
