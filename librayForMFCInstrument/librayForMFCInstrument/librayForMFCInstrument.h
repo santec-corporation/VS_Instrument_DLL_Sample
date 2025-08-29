@@ -18,9 +18,9 @@ namespace librayForMFCInstrument {
 	public:
 		TSL tsl;
 		MPM mpm;                 //MPM Control Class// MPM控制类
-		OSU ^osu = gcnew OSU();
+		OSU ^osu;
 		SPU ^spu = gcnew SPU();
-		PCU pcu;//pcu control class/ / pcu控制类
+		PCU ^pcu;//pcu control class/ / pcu控制类
 		static Class1^ get_instance()
 		{
 			if (cls1 == nullptr)

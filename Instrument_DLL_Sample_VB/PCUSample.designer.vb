@@ -106,7 +106,7 @@ Partial Class PCUSample
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtaddress)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 134)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 123)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(746, 293)
         Me.GroupBox1.TabIndex = 0
@@ -437,7 +437,7 @@ Partial Class PCUSample
         Me.GroupBox5.Controls.Add(Me.btnGetIP)
         Me.GroupBox5.Controls.Add(Me.GroupBox7)
         Me.GroupBox5.Controls.Add(Me.GroupBox6)
-        Me.GroupBox5.Location = New System.Drawing.Point(36, 433)
+        Me.GroupBox5.Location = New System.Drawing.Point(12, 422)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(746, 157)
         Me.GroupBox5.TabIndex = 2
@@ -590,7 +590,7 @@ Partial Class PCUSample
         Me.GroupBox10.Controls.Add(Me.btnUsb_resouce)
         Me.GroupBox10.Controls.Add(Me.cmbusbresouce)
         Me.GroupBox10.Controls.Add(Me.cmbgpib_resouce)
-        Me.GroupBox10.Location = New System.Drawing.Point(36, 23)
+        Me.GroupBox10.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(746, 105)
         Me.GroupBox10.TabIndex = 3
@@ -736,7 +736,7 @@ Partial Class PCUSample
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(807, 602)
+        Me.ClientSize = New System.Drawing.Size(767, 586)
         Me.Controls.Add(Me.GroupBox10)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox1)

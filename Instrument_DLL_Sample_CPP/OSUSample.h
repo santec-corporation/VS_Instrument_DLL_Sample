@@ -38,7 +38,7 @@ namespace Instrument_DLL_Sample_CPP {
 	protected:
 
 
-		OSU ^osu = gcnew OSU();
+		OSU ^osu;
 		SPU ^spu = gcnew SPU();
 	internal: System::Windows::Forms::Label^  Label1;
 	protected:
@@ -471,7 +471,7 @@ namespace Instrument_DLL_Sample_CPP {
 		if (rdo110->Checked)
 		{
 			// OSU-110
-
+			osu = gcnew OSU(false);
 			osu->Terminator = CommunicationTerminator::Cr;
 
 			if (rdiUSB->Checked == true)
@@ -521,7 +521,7 @@ namespace Instrument_DLL_Sample_CPP {
 		else
 		{
 			// OSU-100
-
+			osu = gcnew OSU(true);
 			if (this->cmbdevname->Text == "")
 			{
 				MessageBox::Show("Please enter to the OSU device Resource");
@@ -640,7 +640,6 @@ namespace Instrument_DLL_Sample_CPP {
 		{
 			txtPort->Text = "";
 		}
-
 	}
 	};
 }

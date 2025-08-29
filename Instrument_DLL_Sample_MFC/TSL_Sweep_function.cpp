@@ -53,17 +53,36 @@ END_MESSAGE_MAP()
 
 inline vector<string> split(const string& s, const string& seperator) {
 	vector<string> result;
-	unsigned int posBegin = 0;
-	unsigned int posSeperator = s.find(seperator);
 
-	while (posSeperator != s.npos) {
-		result.push_back(s.substr(posBegin, posSeperator - posBegin));// 
-		posBegin = posSeperator + seperator.size();
-		posSeperator = s.find(seperator, posBegin);
-
+	// 处理空分隔符的情况
+	if (seperator.empty()) {
+		result.push_back(s);
+		return result;
 	}
-	if (posBegin != s.length())
+
+	size_t posBegin = 0;
+	size_t posSeperator = s.find(seperator, posBegin);
+
+	while (posSeperator != string::npos) {
+		// 确保不会提取空字符串（当分隔符连续出现时）
+		if (posSeperator > posBegin) {
+			result.push_back(s.substr(posBegin, posSeperator - posBegin));
+		}
+
+		posBegin = posSeperator + seperator.size();
+
+		// 检查是否已经到达字符串末尾
+		if (posBegin >= s.length()) {
+			break;
+		}
+
+		posSeperator = s.find(seperator, posBegin);
+	}
+
+	// 添加最后一个部分（如果有）
+	if (posBegin < s.length()) {
 		result.push_back(s.substr(posBegin));
+	}
 
 	return result;
 }

@@ -1,6 +1,6 @@
 ﻿Imports Santec
 Public Class OSUSample
-    Private osu As New OSU
+    Private osu
     Private spu As New SPU
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,6 +66,7 @@ Public Class OSUSample
 
         If rdo110.Checked Then
             'OSU-110
+            osu = New OSU(False)
 
             osu.Terminator = CommunicationTerminator.Cr
 
@@ -109,7 +110,7 @@ Public Class OSUSample
             errorcord = osu.Connect(comm_method)
         Else
             'OSU-100
-
+            osu = New OSU(True)
             If Me.cmbdevname.Text = "" Then
                 MsgBox("Please enter to the OSU device Resource", vbOKOnly)
                 Exit Sub

@@ -11,7 +11,7 @@ namespace Instrument_DLL_Sample
         {
             InitializeComponent();
         }
-        OSU osu=new OSU();
+        OSU osu;
         SPU spu = new SPU();
 
         private void OSUSample_Load(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Instrument_DLL_Sample
             if (rdo110.Checked)
             {
                 // OSU-110
-
+                osu = new OSU(false);
                 osu.Terminator = CommunicationTerminator.Cr;
 
                 if (rdiUSB.Checked == true)
@@ -128,6 +128,7 @@ namespace Instrument_DLL_Sample
             else
             {
                 // OSU-100
+                osu = new OSU(true);
 
                 if (this.cmbdevname.Text == "")
                 {

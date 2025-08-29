@@ -197,6 +197,7 @@ Partial Class TSLSample
         Me.cmbgpib_resouce = New System.Windows.Forms.ComboBox()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.rdo770 = New System.Windows.Forms.RadioButton()
         Me.rdo570 = New System.Windows.Forms.RadioButton()
         Me.rdo550 = New System.Windows.Forms.RadioButton()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
@@ -221,7 +222,6 @@ Partial Class TSLSample
         Me.Label65 = New System.Windows.Forms.Label()
         Me.btnSpeed = New System.Windows.Forms.Button()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
-        Me.rdo770 = New System.Windows.Forms.RadioButton()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
@@ -1904,6 +1904,16 @@ Partial Class TSLSample
         Me.GroupBox18.TabStop = False
         Me.GroupBox18.Text = "Target"
         '
+        'rdo770
+        '
+        Me.rdo770.AutoSize = True
+        Me.rdo770.Location = New System.Drawing.Point(21, 64)
+        Me.rdo770.Name = "rdo770"
+        Me.rdo770.Size = New System.Drawing.Size(89, 17)
+        Me.rdo770.TabIndex = 23
+        Me.rdo770.Text = "TSL-770/775"
+        Me.rdo770.UseVisualStyleBackColor = True
+        '
         'rdo570
         '
         Me.rdo570.AutoSize = True
@@ -2192,16 +2202,6 @@ Partial Class TSLSample
         Me.GroupBox28.TabIndex = 5
         Me.GroupBox28.TabStop = False
         Me.GroupBox28.Text = "Sweep Setting"
-        '
-        'rdo770
-        '
-        Me.rdo770.AutoSize = True
-        Me.rdo770.Location = New System.Drawing.Point(21, 64)
-        Me.rdo770.Name = "rdo770"
-        Me.rdo770.Size = New System.Drawing.Size(66, 17)
-        Me.rdo770.TabIndex = 23
-        Me.rdo770.Text = "TSL-770"
-        Me.rdo770.UseVisualStyleBackColor = True
         '
         'TSLSample
         '

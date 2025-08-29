@@ -167,6 +167,7 @@
             this.BtnLD_ON = new System.Windows.Forms.Button();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.rdo770 = new System.Windows.Forms.RadioButton();
             this.rdo570 = new System.Windows.Forms.RadioButton();
             this.rdo550 = new System.Windows.Forms.RadioButton();
             this.BtnDisConnect = new System.Windows.Forms.Button();
@@ -227,7 +228,6 @@
             this.cmb570_Speed = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
             this.btnSpeed = new System.Windows.Forms.Button();
-            this.rdo770 = new System.Windows.Forms.RadioButton();
             this.GroupBox13.SuspendLayout();
             this.GroupBox12.SuspendLayout();
             this.GroupBox15.SuspendLayout();
@@ -1657,6 +1657,17 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Target";
             // 
+            // rdo770
+            // 
+            this.rdo770.AutoSize = true;
+            this.rdo770.Location = new System.Drawing.Point(22, 65);
+            this.rdo770.Name = "rdo770";
+            this.rdo770.Size = new System.Drawing.Size(89, 17);
+            this.rdo770.TabIndex = 2;
+            this.rdo770.Text = "TSL-770/775";
+            this.rdo770.UseVisualStyleBackColor = true;
+            this.rdo770.CheckedChanged += new System.EventHandler(this.rdo770_CheckedChanged);
+            // 
             // rdo570
             // 
             this.rdo570.AutoSize = true;
@@ -2051,7 +2062,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(3, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(734, 549);
@@ -2301,17 +2312,6 @@
             this.btnSpeed.Text = "Get speed table";
             this.btnSpeed.UseVisualStyleBackColor = true;
             this.btnSpeed.Click += new System.EventHandler(this.btnSpeed_Click);
-            // 
-            // rdo770
-            // 
-            this.rdo770.AutoSize = true;
-            this.rdo770.Location = new System.Drawing.Point(22, 65);
-            this.rdo770.Name = "rdo770";
-            this.rdo770.Size = new System.Drawing.Size(66, 17);
-            this.rdo770.TabIndex = 2;
-            this.rdo770.Text = "TSL-770";
-            this.rdo770.UseVisualStyleBackColor = true;
-            this.rdo770.CheckedChanged += new System.EventHandler(this.rdo770_CheckedChanged);
             // 
             // TSLSample
             // 
